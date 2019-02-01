@@ -1,0 +1,72 @@
+<template name='schedule'>
+<view bindtap="updateOne" bindlongpress="deleteOne" data-id="{{item._id}}" class="{{isHistory?'oldContent':'newContent'}}" wx:for="{{list}}" wx:key="{{item._id}}">
+    <!-- <view class="schedule" wx:if="{{index%2!=0}}">
+        <view class="schedule-left odd">13:30</view>
+        <view class="schedule-right">
+            <view class="free">暂无课程提醒</view>
+        </view>
+    </view> -->
+    <view class="schedule" wx:if="{{index%2!=0}}">
+        <!-- <view class="schedule-left odd">{{item.fromTime}}</view> -->
+        <view class="schedule-left odd">
+            <view class="beautify">
+                <view class="line"></view>
+                <view class=".circle"></view>
+            </view>
+            <view >{{item.fromTime}}</view>
+        </view>
+        <!-- <view class="schedule-left odd">{{item.fromTime}}</view> -->
+        <view class="schedule-right">
+            <view class="students">
+                <view wx:for="{{item.students}}" wx:key="{{index}}" wx:for-item="itemStu">
+                    <text class="student stu1" wx:if="{{index == 0}}">{{itemStu}}</text>
+                    <text class="student stu2" wx:if="{{index == 1}}">{{itemStu}}</text>
+                    <text class="student stu3" wx:if="{{index == 2}}">{{itemStu}}</text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="time">{{item.fromTime}}-{{item.toTime}}</view>
+                <view class="tune">{{item.fingering}}--{{item.tune}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="schedule" wx:if="{{index%2==0}}">
+        <view class="schedule-left even">
+            <view class="beautify">
+                <view class="line"></view>
+                <view class=".circle"></view>
+            </view>
+            <view>{{item.fromTime}}</view>
+        </view>
+        <view class="schedule-right">
+            <view class="students">
+                <view wx:for="{{item.students}}" wx:key="{{index}}" wx:for-item="itemStu">
+                    <text class="student stu1" wx:if="{{index == 0}}">{{itemStu}}</text>
+                    <text class="student stu2" wx:if="{{index == 1}}">{{itemStu}}</text>
+                    <text class="student stu3" wx:if="{{index == 2}}">{{itemStu}}</text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="time">{{item.fromTime}}-{{item.toTime}}</view>
+                <view class="tune">{{item.fingering}}--{{item.tune}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+</template>
+    <!-- <view class="schedule">
+        <view class="schedule-left odd">15:30</view>
+        <view class="schedule-right">
+            <view>
+                <text class="student stu1">李叶子</text>
+                <text class="student stu2">刘小雨</text>
+                <text class="student stu3">孙小胖</text>
+            </view>
+            <view class="content">
+                <view class="time">15:30-15:50</view>
+                <view class="tune">大搓--《春江花月夜》</view>
+            </view>
+        </view>
+    </view>
+</template>

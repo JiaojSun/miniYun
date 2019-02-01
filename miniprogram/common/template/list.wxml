@@ -1,0 +1,11 @@
+<template name='list-template'>
+  <scroll-view scroll-y='ture' style='height: 100%' lower-threshold='100' bindscrolltolower='lower'>
+    <view class='item' wx:for='{{list}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='tap'>
+      <image src='{{item.cover}}'></image>
+      <text>{{item.title +"/"+ item.rate}}</text>
+    </view>
+    <view class='loading' wx:if='{{loading}}'>
+      <image mode='widthFix' src='/assets/loading/loading-bars.svg'></image>
+    </view>
+  </scroll-view>
+</template>

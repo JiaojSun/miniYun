@@ -1,0 +1,241 @@
+
+/* .newContent  */
+.newContent .schedule{
+    display: flex;
+    width: 750rpx;
+    min-height: 70px;
+    color: #fafafa;
+}
+.newContent .schedule .line{
+    background: red;
+}
+.newContent .schedule .schedule-left{
+    width: 200rpx;
+    min-height: 70px;
+
+    /* 以下如何使文字上下左右居中显示 */
+    display: flex;
+    /* 定义了项目在主轴上的对齐方式 */
+    justify-content: center;   
+    /* 属性定义项目在交叉轴上如何对齐 */
+    align-items: center;
+    /* 解决circle设置margin属性无效的问题 */
+    overflow:hidden;
+}
+.newContent .schedule .schedule-left .beautify{
+    position:relative;
+}
+.newContent .schedule .schedule-left .beautify .line{
+    background: #ffff01;
+    min-height:70px;
+    width:2px;
+    margin-left:10px;
+    position:relative;
+    left:-6px;
+    border: 1px solid #d7971b;
+}
+.newContent .schedule .schedule-left .beautify .circle{
+    background:#f8d488;
+    border:2px solid #fef898;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    margin-right:2px;
+    
+}
+.newContent .schedule .odd{
+    border: 1px solid #2e2e2e;
+    background: linear-gradient(#404040,#1e1e1e); 
+}
+.newContent .schedule .even{
+    border: 1px solid #353535;
+    background: linear-gradient(#4a4a4a,#363636); 
+}
+
+.newContent .schedule .schedule-right{
+    padding-left: 16px;
+    width: 550rpx;
+    min-height: 70px;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.newContent .schedule .schedule-right .free{
+    font-size: 18px;
+    min-height: 70px;
+    color: #393939;
+    font-weight: bold;
+    /* 保证文字上下居中 */
+    display: flex;
+    /* 确定主轴方向 column：主轴为垂直方向，起点在上沿*/
+    flex-direction: column;
+    /* 定义了项目在主轴上的对齐方式 */
+    justify-content: center; 
+}
+.newContent .schedule .schedule-right .student{
+    width:80px;
+    display:inline-block;
+    text-align:center;
+    border-radius:8px;
+    font-size: 16px;
+    margin-top: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 4px;
+    box-shadow: 1px 1px 1px 1px #BFBFBF;
+}
+.newContent .schedule .schedule-right .stu1{
+    background: linear-gradient(to right,#6cc51f, #abe26b);
+}
+.newContent .schedule .schedule-right .stu2{
+    background: linear-gradient(to right,#e26e3b, #f2a249);
+}
+.newContent .schedule .schedule-right .stu3{
+    background: linear-gradient(to right,#af2120, #df4648);
+}
+.newContent .schedule .schedule-right .content{
+    margin:10px 0;
+    /* 使time和tune并列排布 */
+    display: flex;
+    font-size: 14px;
+}
+.newContent .schedule .schedule-right .content .time{
+    font-size: 12px;
+    /* background: blue; */
+    margin:auto 2px;
+    color: #d0d0d0;
+}
+.newContent .schedule .schedule-right .content .tune{
+    /* background: gold; */
+    font-size: 16px;
+    margin-left: 10px;
+    color:#696969;
+
+}
+
+
+/* oldContent */
+
+/* .oldContent  */
+.oldContent .schedule{
+    display: flex;
+    width: 750rpx;
+    min-height: 70px;
+    color: #fafafa;
+}
+.oldContent .schedule .line{
+    background: red;
+}
+.oldContent .schedule .schedule-left{
+    width: 200rpx;
+    min-height: 70px;
+
+    /* 以下如何使文字上下左右居中显示 */
+    display: flex;
+    /* 定义了项目在主轴上的对齐方式 */
+    justify-content: center;   
+    /* 属性定义项目在交叉轴上如何对齐 */
+    align-items: center;
+    /* 解决circle设置margin属性无效的问题 */
+    overflow:hidden;
+    color:#252525;
+}
+.oldContent .schedule .schedule-left .beautify{
+    position:relative;
+}
+.oldContent .schedule .schedule-left .beautify .line{
+    background:linear-gradient(#efb100,#ffbe2a);
+    min-height:70px;
+    width:4px;
+    margin-left:10px;
+    position:relative;
+    left:-6px;
+}
+.oldContent .schedule .schedule-left .beautify .circle{
+    background:#f8d488;
+    border:2px solid #fef898;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    margin-right:2px;
+    
+}
+.oldContent .schedule .odd{
+    /* border: 1px solid #2e2e2e; */
+    /* background: linear-gradient(#404040,#1e1e1e);  */
+}
+.oldContent .schedule .even{
+    /* border: 1px solid #353535; */
+    /* background: linear-gradient(#4a4a4a,#363636);  */
+}
+
+.oldContent .schedule .schedule-right{
+    padding-left: 16px;
+    width: 550rpx;
+    min-height: 70px;
+    /* border-top: 1px solid #eaeaea; */
+    /* border-bottom: 1px solid #eaeaea; */
+}
+.oldContent .schedule .schedule-right .free{
+    font-size: 18px;
+    min-height: 70px;
+    color: #393939;
+    font-weight: bold;
+    /* 保证文字上下居中 */
+    display: flex;
+    /* 确定主轴方向 column：主轴为垂直方向，起点在上沿*/
+    flex-direction: column;
+    /* 定义了项目在主轴上的对齐方式 */
+    justify-content: center; 
+}
+.oldContent .schedule .schedule-right .student{
+    width:80px;
+    display:inline-block;
+    text-align:center;
+    border-radius:8px;
+    font-size: 16px;
+    margin-top: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 4px;
+    box-shadow: 1px 1px 1px 1px #BFBFBF;
+}
+.oldContent .schedule .schedule-right .stu1{
+    background: linear-gradient(to right,#6cc51f, #abe26b);
+}
+.oldContent .schedule .schedule-right .stu2{
+    background: linear-gradient(to right,#e26e3b, #f2a249);
+}
+.oldContent .schedule .schedule-right .stu3{
+    background: linear-gradient(to right,#af2120, #df4648);
+}
+.oldContent .schedule .schedule-right .content{
+    margin:10px 0;
+    /* 使time和tune并列排布 */
+    display: flex;
+    font-size: 14px;
+}
+.oldContent .schedule .schedule-right .content .time{
+    font-size: 12px;
+    /* background: blue; */
+    margin:auto 2px;
+    color: #d0d0d0;
+}
+.oldContent .schedule .schedule-right .content .tune{
+    /* background: gold; */
+    font-size: 16px;
+    margin-left: 10px;
+    color:#696969;
+
+}

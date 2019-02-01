@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<import src='/common/template/schedule/schedule.wxml' />
+<!-- 顶部日期 -->
+<date bind:getDataInfo="onGetDataInfo"></date>
+<!-- 课程列表 -->
+<template is="schedule" data="{{list,isHistory}}"></template>
+<!-- 添加按钮 -->
+<button type="default" style="{{isHistory?'display:none':''}}" bindtap="onAdd">一项添加</button>
+
+
+

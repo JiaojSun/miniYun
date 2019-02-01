@@ -1,0 +1,5 @@
+{
+    "usingComponents":{
+        "date": "/common/components/date/date"
+    }
+}

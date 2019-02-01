@@ -1,0 +1,42 @@
+/* pages/index/index.wxss */
+@import "/common/css/list.wxss";
+.edit{
+    /* background: green; */
+}
+.edit .section{
+    display:flex;
+    justify-content:space-between;
+    padding-left:30px;
+    padding-right:30px;
+    font:16px/1.5 "微软雅黑";
+    background:#f4f4f4;
+    border-bottom:2px solid #f2efdc;
+    height:50px;
+    line-height:50px;
+    margin:10px;    
+}
+.edit .section .section__title{
+    margin-right:10px;
+}
+.edit .section .section__content{
+    /* background: blue; */
+}
+.edit .section input{
+    margin:auto 0px;
+    text-align:right;
+}
+.edit .btn-area{
+    display: flex;
+    position:absolute;
+    bottom:0px;    
+}
+.edit .btn-area .addBtn{
+    color:#fafafa;
+    width:373rpx;
+    border-radius:0px;
+    border:1px solid #2e2e2e;
+    background:linear-gradient(#404040,#1e1e1e);
+}
+.edit .btn-area .sure{
+    margin-right: 4rpx;
+}

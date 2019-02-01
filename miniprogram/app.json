@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index1/index1",
+    "pages/index/index",
+    "pages/add/add",
+    "pages/edit/edit",
+    "pages/test/test",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index1/index1",
+        "text": "我的",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index-active.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "yun",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user-active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "琴社课表",
+    "navigationBarTextStyle": "black"
+  }
+}

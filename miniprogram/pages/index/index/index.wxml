@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<import src='/common/template/schedule/schedule.wxml' />
+<!-- 顶部日期 -->
+<date></date>
+<!-- 课程列表 -->
+<template is="schedule"></template>
+<!-- 主体内容 -->
+<!-- <template is='list-template' data='{{list,loading}}'></template> -->
+
+

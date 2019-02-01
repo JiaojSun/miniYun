@@ -1,0 +1,49 @@
+<import src='/common/template/schedule/schedule.wxml' />
+<view class="add">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <date capture-catch:touchstart="test" bind:getDataInfo="onGetDataInfo" now-date="{{dateInfo}}" ></date>
+        <!-- 模糊选择 -->
+        <view class="section">
+            <view class="section__title">学生</view>
+            <picker class="section__content" bindchange="bindStudentChange" value="{{indexStu}}" range="{{students}}">
+                <view class="picker">{{students[indexStu]}}</view>
+            </picker>
+        </view>
+        <view class="section">
+            <view class="section__title">开始时间</view>
+            <picker class="section__content" mode="time" value="{{fromTime}}" start="09:01" end="21:01" bindchange="bindFromTimeChange">
+                <view class="picker">{{fromTime}}</view>
+            </picker>
+        </view>
+        <view class="section">
+            <view class="section__title">结束时间</view>
+            <picker class="section__content" mode="time" value="{{toTime}}" start="{{toTimeStart}}" end="21:01" bindchange="bindToTimeChange">
+                <view class="picker">{{toTime}}</view>
+            </picker>
+        </view>
+        <!-- 不可填自己计算 -->
+        <view class="section">
+            <view class="section__title">时长</view>
+            <view class="section__content">{{min}}分钟</view>
+        </view>
+
+        <!-- 指法和曲子 -->
+        <view class="section">
+            <view class="section__title">课程</view>
+            <picker class="section__content" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">
+                    {{multiArray[0][multiIndex[0]]}}~{{multiArray[1][multiIndex[1]]}}{{multiArray[2][multiIndex[2]]}}
+                </view>
+            </picker>
+        </view>
+        <!-- 备注 -->
+        <view class="section">
+            <view class="section__title">备注</view>
+            <input class="section__content" name="input" placeholder="please input here" />
+        </view>
+        <view class="btn-area">
+            <button class="addBtn sure" form-type="submit">确定</button>
+            <button class="addBtn" bindtap="onBack">返回</button>
+        </view>
+    </form>
+</view>
